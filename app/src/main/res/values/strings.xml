@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="activity_main_description">This is your playlist, please select song to play.</string>
+    <string name="now_playing_label">Now playing ...</string>
+</resources>
