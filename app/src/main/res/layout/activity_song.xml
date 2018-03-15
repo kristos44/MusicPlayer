@@ -22,7 +22,7 @@
             android:text="@string/now_playing_label" />
 
         <TextView
-            android:id="@+id/song_title"
+            android:id="@+id/song_title_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/list_item_padding"
@@ -30,7 +30,7 @@
             android:textSize="@dimen/song_title_size" />
 
         <TextView
-            android:id="@+id/song_artist"
+            android:id="@+id/song_artist_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/list_item_padding"

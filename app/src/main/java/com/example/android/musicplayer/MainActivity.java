@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final ArrayList<Song> Songs = new ArrayList<>(Arrays.asList(
+        final ArrayList<Song> songsList = new ArrayList<>(Arrays.asList(
                 new Song("Silence", "Marshmello, Khalid"),
                 new Song("Only one", "Carlie Hanson"),
                 new Song("Sick Boy", "The Chainsmokers"),
@@ -31,16 +31,16 @@ public class MainActivity extends AppCompatActivity {
                 new Song("Lie", "Shallou, Riah")
         ));
 
-        ListView listView = findViewById(R.id.list);
+        ListView songsListView = findViewById(R.id.list);
 
-        listView.setAdapter(new SongAdapter<Song>(this, Songs));
+        songsListView.setAdapter(new SongAdapter<Song>(this, songsList));
 
-        listView.setOnItemClickListener(new OnItemClickListener() {
+        songsListView.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent songIntent = new Intent(MainActivity.this, SongActivity.class);
-                songIntent.putExtra("title", Songs.get(i).getmTitle());
-                songIntent.putExtra("artist", Songs.get(i).getmArtist());
+                songIntent.putExtra("title", songsList.get(i).getmTitle());
+                songIntent.putExtra("artist", songsList.get(i).getmArtist());
                 startActivity(songIntent);
             }
         });
